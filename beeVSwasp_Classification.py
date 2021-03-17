@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-
+#Bee vs Wasp Classification
 import numpy as np
 import os
 import tensorflow as tf
@@ -87,7 +87,7 @@ def conv_net(X, dropout, reuse, is_training):
 
 learning_rate = 0.001
 num_steps = 1000
-batch_size = 128
+batch_size = 64
 
 # Network Parameters
 dropout = 0.25
