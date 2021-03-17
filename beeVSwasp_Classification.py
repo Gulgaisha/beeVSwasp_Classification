@@ -140,10 +140,10 @@ model.train(input_fn, steps=num_steps)
 
 # Evaluate the Model
 # Define the input function for evaluating
-input_fn = tf.estimator.inputs.numpy_input_fn(
+input_fn = tf.compat.v1.estimator.inputs.numpy_input_fn(
     x={'images': testX}, y=testY,
     batch_size=batch_size, shuffle=False)
 # Use the Estimator 'evaluate' method
-e = model.evaluate(input_fn)
+eval = model.evaluate(input_fn)
 
-print("Testing Accuracy:", e['accuracy'])
+print("Testing Accuracy:", eval['accuracy'])
